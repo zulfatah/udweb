@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +9,8 @@
 
   <!-- ✅ Open Graph Meta -->
   <meta property="og:title" content="Undangan Pernikahan Fulan & Fulanah" />
-  <meta property="og:description" content="Dengan penuh kebahagiaan kami mengundang Anda untuk menghadiri pernikahan kami pada Minggu, 20 Oktober 2025." />
+  <meta property="og:description"
+    content="Dengan penuh kebahagiaan kami mengundang Anda untuk menghadiri pernikahan kami pada Minggu, 20 Oktober 2025." />
   <meta property="og:image" content="https://haul-rho.vercel.app/bg.jpeg" />
   <meta property="og:url" content="https://haul-rho.vercel.app" />
   <meta property="og:type" content="website" />
@@ -16,7 +18,8 @@
   <!-- ✅ Untuk Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Undangan Pernikahan Fulan & Fulanah" />
-  <meta name="twitter:description" content="Dengan penuh kebahagiaan kami mengundang Anda untuk menghadiri pernikahan kami." />
+  <meta name="twitter:description"
+    content="Dengan penuh kebahagiaan kami mengundang Anda untuk menghadiri pernikahan kami." />
   <meta name="twitter:image" content="https://haul-rho.vercel.app/bg.jpeg" />
   <title>Undangan Pernikahan</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,52 +28,69 @@
       transform: translateY(0);
       opacity: 1;
     }
+
     .cover-hide {
       transform: translateY(-100%);
       opacity: 0;
     }
+
     #cover {
       transition: all 1s ease-in-out;
     }
+
     body.noscroll {
       overflow: hidden;
       height: 100vh;
     }
+
     /* Reveal animation */
     .reveal {
       opacity: 0;
-      transform: scale(0.9) translateY(30px);
+      transform: scale(0.8) translateY(40px);
       transition: all 0.8s ease-out;
     }
+
     .reveal.active {
       opacity: 1;
       transform: scale(1) translateY(0);
     }
-     @keyframes pop {
-    0%, 100% {
-      transform: scale(1);
+
+    @keyframes pop {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.09);
+      }
     }
-    50% {
-      transform: scale(1.09);
+
+    .animate-pop {
+      animation: pop 3s infinite ease-in-out;
     }
-  }
-  .animate-pop {
-    animation: pop 3s infinite ease-in-out;
-  }
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  .spin-infinite {
-    animation: spin 4s linear infinite;
-  }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spin-infinite {
+      animation: spin 4s linear infinite;
+    }
   </style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTW2F76JFY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-YTW2F76JFY');
@@ -78,29 +98,30 @@
 
 <body class="bg-gray-100 font-sans noscroll">
   <!-- COVER -->
-  <div id="cover" class="fixed inset-0 flex flex-col items-center justify-center bg-cover bg-center z-50" 
-     style="background-image: url('./bg.jpeg');">
+  <div id="cover" class="fixed inset-0 flex flex-col items-center justify-center bg-cover bg-center z-50"
+    style="background-image: url('./bg.jpeg');">
     <div class="bg-black bg-opacity-50 p-6 rounded-2xl text-center text-white">
       <h1 class="text-3xl font-bold mb-2">Fulan & Fulanah</h1>
       <p id="guestName" class="text-lg mb-4"></p>
-      <button onclick="openInvitation()" 
-  class="px-6 py-2 bg-pink-600 text-white rounded-full animate-pop">
-  Buka Undangan
-</button>
+      <button onclick="openInvitation()" class="px-6 py-2 bg-pink-600 text-white rounded-full animate-pop">
+        Buka Undangan
+      </button>
 
     </div>
   </div>
-<!-- Ikon Musik -->
-<div id="musicIcon" class="hidden fixed bottom-4 left-4 z-50">
-  <button onclick="toggleMusic()" class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white shadow-lg">
-    🎵
-  </button>
-</div>
+  <!-- Ikon Musik -->
+  <div id="musicIcon" class="hidden fixed bottom-4 left-4 z-50">
+    <button onclick="toggleMusic()"
+      class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white shadow-lg">
+      🎵
+    </button>
+  </div>
 
   <!-- CONTENT -->
   <div id="content" class="opacity-0">
     <!-- Hero -->
-    <section class="reveal h-screen flex flex-col justify-center items-center bg-gradient-to-r from-pink-100 to-pink-200 text-center p-6">
+    <section
+      class="reveal h-screen flex flex-col justify-center items-center bg-gradient-to-r from-pink-100 to-pink-200 text-center p-6">
       <h2 class="text-4xl md:text-6xl font-bold text-pink-700 mb-4">Fikar & Mila</h2>
       <p class="text-lg md:text-2xl text-gray-700">Akan melangsungkan pernikahan pada</p>
       <p class="text-xl md:text-3xl font-semibold text-pink-800 mt-2">Minggu, 20 Oktober 2025</p>
@@ -126,7 +147,8 @@
     <!-- Lokasi -->
     <section class="reveal py-10 bg-white text-center">
       <h3 class="text-2xl font-bold mb-6">Lokasi</h3>
-      <iframe class="mx-auto w-11/12 md:w-1/2 h-64 rounded-lg shadow-lg" src="https://maps.google.com/maps?q=Jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+      <iframe class="mx-auto w-11/12 md:w-1/2 h-64 rounded-lg shadow-lg"
+        src="https://maps.google.com/maps?q=Jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
     </section>
 
     <!-- RSVP -->
@@ -144,52 +166,134 @@
     </section>
   </div>
   <audio id="bgMusic" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
 
-<script>
-  function toggleMusic() {
-    const audio = document.getElementById('bgMusic');
-    const icon = document.querySelector('#musicIcon button');
-    if (audio.paused) {
-      audio.play();
-      icon.classList.add('spin-infinite');
-    } else {
-      audio.pause();
-      icon.classList.remove('spin-infinite');
+  <!-- Komentar -->
+  <section class="reveal py-10 bg-white text-center">
+    <h3 class="text-2xl font-bold mb-6">Komentar</h3>
+
+    <!-- Form komentar -->
+    <form id="commentForm" class="max-w-md mx-auto mb-8">
+      <input id="commentName" type="text" placeholder="Nama" class="w-full mb-4 px-4 py-2 border rounded-lg" required />
+      <textarea id="commentText" placeholder="Tulis komentar..." rows="3"
+        class="w-full mb-4 px-4 py-2 border rounded-lg" required></textarea>
+      <button type="submit" class="w-full bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700">
+        Kirim Komentar
+      </button>
+    </form>
+
+    <!-- List komentar dengan tinggi tetap + scroll -->
+    <div id="commentsList"
+      class="max-w-xl mx-auto h-64 overflow-y-auto border rounded-lg shadow-inner bg-gray-50 px-4 py-3 space-y-4 text-left">
+      <!-- Komentar akan ditampilkan di sini -->
+    </div>
+  </section>
+
+  <script>
+    const apiUrl = "http://localhost:3002/comments"; // ganti dengan URL API kamu
+
+    // Load komentar saat halaman dibuka
+    async function loadComments() {
+      try {
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+        const list = document.getElementById("commentsList");
+        list.innerHTML = "";
+
+        if (!data.data || data.data.length === 0) {
+          list.innerHTML = "<p class='text-gray-500'>Belum ada komentar.</p>";
+          return;
+        }
+
+        data.data.forEach(c => {
+          const item = document.createElement("div");
+          item.className = "p-4 border rounded-lg shadow-sm bg-gray-50";
+          item.innerHTML = `
+          <p class="font-semibold text-pink-700">${c.name}</p>
+          <p class="text-gray-700">${c.text}</p>
+          <small class="text-gray-500 text-sm">
+            ${new Date(c.created_at).toLocaleString("id-ID")}
+          </small>
+        `;
+          list.appendChild(item);
+        });
+      } catch (err) {
+        console.error("Gagal load komentar:", err);
+      }
     }
-  }
+
+    // Submit komentar
+    document.getElementById("commentForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = document.getElementById("commentName").value.trim();
+      const text = document.getElementById("commentText").value.trim();
+      if (!name || !text) return;
+
+      try {
+        await fetch(apiUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, text })
+        });
+
+        // reset form
+        e.target.reset();
+
+        // reload komentar
+        loadComments();
+      } catch (err) {
+        console.error("Gagal kirim komentar:", err);
+      }
+    });
+
+    // pertama kali load
+    loadComments();
+  </script>
+
+  <script>
+    function toggleMusic() {
+      const audio = document.getElementById('bgMusic');
+      const icon = document.querySelector('#musicIcon button');
+      if (audio.paused) {
+        audio.play();
+        icon.classList.add('spin-infinite');
+      } else {
+        audio.pause();
+        icon.classList.remove('spin-infinite');
+      }
+    }
 
 
-</script>
+  </script>
 
 
   <script>
     function openInvitation() {
-    const cover = document.getElementById('cover');
-    const content = document.getElementById('content');
-    const audio = document.getElementById('bgMusic');
-    const icon = document.querySelector('#musicIcon button');
+      const cover = document.getElementById('cover');
+      const content = document.getElementById('content');
+      const audio = document.getElementById('bgMusic');
+      const icon = document.querySelector('#musicIcon button');
 
-    document.body.classList.remove('noscroll');
-    cover.classList.remove('cover-show');
-    cover.classList.add('cover-hide');
-    setTimeout(() => {
-      cover.style.display = 'none';
-      content.classList.remove('opacity-0');
-      content.classList.add('opacity-100', 'transition', 'duration-1000');
+      document.body.classList.remove('noscroll');
+      cover.classList.remove('cover-show');
+      cover.classList.add('cover-hide');
+      setTimeout(() => {
+        cover.style.display = 'none';
+        content.classList.remove('opacity-0');
+        content.classList.add('opacity-100', 'transition', 'duration-1000');
 
-      // munculkan ikon musik
-      document.getElementById('musicIcon').classList.remove('hidden');
+        // munculkan ikon musik
+        document.getElementById('musicIcon').classList.remove('hidden');
 
-      // langsung mainkan musik
-      audio.play().then(() => {
-        icon.classList.add('spin-infinite'); // ikon berputar
-      }).catch(err => {
-        console.log("Autoplay gagal:", err);
-      });
-    }, 1000);
-  }
+        // langsung mainkan musik
+        audio.play().then(() => {
+          icon.classList.add('spin-infinite'); // ikon berputar
+        }).catch(err => {
+          console.log("Autoplay gagal:", err);
+        });
+      }, 1000);
+    }
 
     // Get guest name from URL query (?to=Nama)
     const urlParams = new URLSearchParams(window.location.search);
@@ -228,17 +332,22 @@
 
     // Reveal on scroll
     const reveals = document.querySelectorAll('.reveal');
+
     const observer = new IntersectionObserver(entries => {
-      entries.forEach((entry, idx) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('active');
-          }, idx * 150); // delay bertahap
+          // Saat elemen masuk viewport → tambahkan animasi
+          entry.target.classList.add('active');
+        } else {
+          // Saat elemen keluar viewport → hapus animasi
+          entry.target.classList.remove('active');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.7 });
 
     reveals.forEach(r => observer.observe(r));
+
   </script>
 </body>
+
 </html>
